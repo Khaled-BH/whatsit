@@ -1,5 +1,12 @@
 # Whatsit
 
+<p align="center">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/github/license/Khaled-BH/whatsit?color=D97757"></a>
+  <a href="https://github.com/Khaled-BH/whatsit/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Khaled-BH/whatsit?color=D97757"></a>
+  <img alt="Platform: Windows 10/11" src="https://img.shields.io/badge/platform-Windows%2010%2F11-D97757">
+  <img alt="Built with Tauri v2 + Rust" src="https://img.shields.io/badge/built%20with-Tauri%20v2%20%2B%20Rust-D97757?logo=tauri&logoColor=white">
+</p>
+
 **Snip → ask Claude.** A tiny Windows tray app: press a hotkey, drag a box
 around anything on screen, and ask Claude about it — answer appears in a small
 popup right at your cursor.

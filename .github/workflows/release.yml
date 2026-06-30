@@ -1,0 +1,46 @@
+name: release
+
+# Build the Windows app and attach the installer to a GitHub Release
+# whenever a version tag (e.g. v0.2.0) is pushed.
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch: # also allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Rust build
+        uses: swatinem/rust-cache@v2
+        with:
+          workspaces: "./src-tauri -> target"
+
+      - name: Install frontend dependencies
+        run: npm ci
+
+      - name: Build app and publish release
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tagName: ${{ github.ref_name }}
+          releaseName: "Whatsit ${{ github.ref_name }}"
+          releaseBody: "See the assets below to download and install. The build is unsigned — Windows SmartScreen may warn on first run (More info → Run anyway)."
+          releaseDraft: false
+          prerelease: false
