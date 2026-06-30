@@ -6,7 +6,8 @@ popup right at your cursor.
 
 > Built with Tauri v2 + Rust. ~9 MB installer, ~28 MB RAM. No Electron.
 
-![Whatsit demo](docs/demo.gif)
+<!-- TODO: drop a 5s capture→answer clip at docs/demo.gif -->
+_Demo GIF coming soon._
 
 ---
 
