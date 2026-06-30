@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scrn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main class="card" id="card">
+      <!-- Hero: the snip, with the caption bar overlaid -->
+      <div class="hero" id="hero">
+        <img id="shot" alt="" />
+        <div class="caption" id="caption" data-tauri-drag-region>
+          <span class="logo"></span>
+          <span class="snip" id="snipLabel">snip</span>
+          <span class="dims" id="dims"></span>
+          <span class="asked" id="asked"></span>
+        </div>
+        <button class="close" id="close" title="Close (Esc)" type="button">×</button>
+      </div>
+
+      <!-- Compose row -->
+      <div class="compose" id="compose">
+        <div class="field">
+          <input
+            id="q"
+            type="text"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Ask about this snip…"
+          />
+        </div>
+        <button class="send" id="send" title="Send (Enter)" type="button">↑</button>
+      </div>
+      <div class="hint" id="hint">↵ send · default &ldquo;What is this?&rdquo; · Esc to close</div>
+
+      <!-- Response -->
+      <div class="answer" id="answer" hidden>
+        <div class="answer-head">
+          <span class="claude">Claude</span>
+          <span class="dots" id="dots">
+            <i class="dot1"></i><i class="dot2"></i><i class="dot3"></i>
+          </span>
+        </div>
+        <div class="answer-body" id="answerBody"></div>
+        <div class="shimmer" id="shimmer">
+          <div class="shimmer-line" style="width: 100%"></div>
+          <div class="shimmer-line" style="width: 64%"></div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
