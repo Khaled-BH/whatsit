@@ -1,6 +1,6 @@
 [package]
 name = "whatsit"
-version = "0.1.0"
+version = "0.1.1"
 description = "Snip a region of the screen and ask Claude about it"
 edition = "2021"
 

@@ -27,8 +27,7 @@ body {
 }
 
 body {
-  /* transparent gutter so the card's drop shadow has room to render */
-  padding: 16px;
+  padding: 0;
 }
 
 @keyframes blink {
@@ -54,7 +53,6 @@ body {
   background: var(--cream);
   border: 1px solid var(--border);
   border-radius: 14px;
-  box-shadow: 0 20px 44px -14px rgba(60, 48, 32, 0.32);
   overflow: hidden;
 }
 
