@@ -216,8 +216,120 @@ body {
   font-family: "JetBrains Mono", monospace;
 }
 
+/* session picker (custom dropdown) */
+.session-row {
+  padding: 0 12px 10px;
+}
+.session-picker {
+  position: relative;
+}
+
+.session-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  text-align: left;
+}
+.session-trigger.open {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(217, 119, 87, 0.12);
+}
+.session-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  flex-shrink: 0;
+}
+.session-trigger-label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.session-chevron {
+  color: var(--muted);
+  font-size: 10px;
+  transition: transform 0.15s ease;
+}
+.session-trigger.open .session-chevron {
+  transform: rotate(180deg);
+}
+
+.session-panel {
+  margin-top: 6px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+.session-search {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  outline: none;
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 12px;
+  color: var(--ink);
+  background: var(--cream);
+  cursor: text;
+  user-select: text;
+}
+.session-search::placeholder {
+  color: var(--muted);
+}
+
+.session-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+.session-empty {
+  padding: 12px 10px;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+.session-item {
+  padding: 7px 10px;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+}
+.session-item.active {
+  background: rgba(217, 119, 87, 0.1);
+}
+.session-item.selected {
+  border-left-color: var(--accent);
+}
+.session-item-title {
+  font-size: 12.5px;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.session-item-sub {
+  font-size: 10.5px;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 1px;
+}
+
 /* hide the composer once a question is sent */
 .card.asking .compose,
+.card.asking .session-row,
 .card.asking .hint {
   display: none;
 }

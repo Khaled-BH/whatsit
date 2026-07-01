@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "Whatsit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "identifier": "com.whatsit.app",
   "build": {
     "frontendDist": "../dist",
@@ -37,11 +37,20 @@
   "bundle": {
     "active": true,
     "targets": ["nsis"],
+    "createUpdaterArtifacts": true,
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
       "icons/128x128@2x.png",
       "icons/icon.ico"
     ]
+  },
+  "plugins": {
+    "updater": {
+      "endpoints": [
+        "https://github.com/Khaled-BH/whatsit/releases/latest/download/latest.json"
+      ],
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEI0NjcxMDE2QURDQjA0RjMKUldUekJNdXRGaEJudEcvYjhsbkVNcktuOXBQVGlPOWNLRUhxbE8xNHFFQ2NmbzhpVnc0bGJVN04K"
+    }
   }
 }

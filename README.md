@@ -5,6 +5,7 @@
   <a href="https://github.com/Khaled-BH/whatsit/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Khaled-BH/whatsit?color=D97757"></a>
   <img alt="Platform: Windows 10/11" src="https://img.shields.io/badge/platform-Windows%2010%2F11-D97757">
   <img alt="Built with Tauri v2 + Rust" src="https://img.shields.io/badge/built%20with-Tauri%20v2%20%2B%20Rust-D97757?logo=tauri&logoColor=white">
+  <a href="https://x.com/kbh_56"><img alt="X: @kbh_56" src="https://img.shields.io/badge/%40kbh__56-000000?logo=x&logoColor=white"></a>
 </p>
 
 **Snip → ask Claude.** A tiny Windows tray app: press a hotkey, drag a box
@@ -85,4 +86,4 @@ answer is rendered with `marked` + sanitized with `DOMPurify`.
 
 ## License
 
-[MIT](LICENSE) © 2026 Khaled BH
+[MIT](LICENSE) © 2026 Khaled BH · [@kbh_56](https://x.com/kbh_56)

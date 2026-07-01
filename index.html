@@ -39,6 +39,26 @@
         </div>
         <button class="send" id="send" title="Send (Enter)" type="button">↑</button>
       </div>
+      <div class="session-row" id="sessionRow">
+        <div class="session-picker" id="sessionPicker">
+          <button class="session-trigger" id="sessionTrigger" type="button" title="Ask inside an existing Claude session">
+            <span class="session-dot"></span>
+            <span class="session-trigger-label" id="sessionLabel">New chat</span>
+            <span class="session-chevron">▾</span>
+          </button>
+          <div class="session-panel" id="sessionPanel" hidden>
+            <input
+              class="session-search"
+              id="sessionSearch"
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="Search sessions…"
+            />
+            <div class="session-list" id="sessionList"></div>
+          </div>
+        </div>
+      </div>
       <div class="hint" id="hint">↵ send · default &ldquo;What is this?&rdquo; · Esc to close</div>
 
       <!-- Response -->
